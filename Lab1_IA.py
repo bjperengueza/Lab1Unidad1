@@ -203,3 +203,8 @@ def cam_termica():
             else:
                 print("El departamento 2 se encuentra con una temperatura baja")
                 print("No se efectuo ninguna acción. Costo actual" + str(costo))
+    print("Objetivo alcanzado: ")
+    print(objetivo)
+    print("Rendimiento: " + str(costo))
+
+cam_termica()
