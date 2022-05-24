@@ -55,7 +55,34 @@ def cam_termica():
                 print("El departamento 3 se encuentra con una temperatura baja")
                 print("No se efectuo ninguna acción. Costo actual" + str(costo))
 
-        
+        if temp_ingreso == '0':
+            print("El departamento 1 se encuentra con una temperatura baja")
+
+            if temp_ingreso1 == '1':
+                print("El departamento 2 registra una temperatura alta")
+                print("Activar el sistema de enfriamiento")
+                objetivo['departamento2'] = '0'
+                costo +=1 
+                print("Temperatura del departamento 2 establecida en baja.")
+                print("Costo actual: "+str(costo)) 
+            else:
+                print("El departamento 2 se encuentra con una temperatura baja")
+                print("No se efectuo ninguna acción. Costo actual" + str(costo))
+
+            if temp_ingreso2 == '1':
+                print("El departamento 3 registra una temperatura alta")
+                print("Activar el sistema de enfriamiento")
+                objetivo['departamento3'] = '0'
+                costo +=1 
+                print("Temperatura del departamento 3 establecida en baja.")
+                print("Costo actual: "+str(costo)) 
+            else:
+                print("El departamento 3 se encuentra con una temperatura baja")
+                print("No se efectuo ninguna acción. Costo actual" + str(costo))
+                
+
+
+
 
 
             
