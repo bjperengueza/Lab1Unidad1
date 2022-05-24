@@ -1,1 +1,1 @@
-def 
+def cam_termica();
