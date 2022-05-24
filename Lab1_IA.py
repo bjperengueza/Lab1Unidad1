@@ -17,7 +17,7 @@ def cam_termica():
     print("Se busca llegar a la temperatura: "+ str(objetivo))
 
     #verificar en que habitacion se encuentra la camara
-    if depart_ingreso == 'departamentos1':
+    if depart_ingreso == 'departamento1':
         #mensaje de ubicacion  de la camara
         print("La camara se encuentra en el departamento 1" )
         #caso en que el departamento registre una termperatura alta
@@ -42,7 +42,7 @@ def cam_termica():
                 print("Costo actual: "+str(costo))
             else:
                 print("El departamento 2 se encuentra con una temperatura baja")
-                print("No se efectuo ninguna acción. Costo actual" + str(costo))
+                print("No se efectuo ninguna acción. Costo actual: " + str(costo))
             
             if temp_ingreso2 == '1':
                 print("El departamento 3 registra una temperatura alta")
@@ -53,7 +53,7 @@ def cam_termica():
                 print("Costo actual: "+str(costo))
             else:
                 print("El departamento 3 se encuentra con una temperatura baja")
-                print("No se efectuo ninguna acción. Costo actual" + str(costo))
+                print("No se efectuo ninguna acción. Costo actual: " + str(costo))
 
         if temp_ingreso == '0':
             print("El departamento 1 se encuentra con una temperatura baja")
@@ -67,7 +67,7 @@ def cam_termica():
                 print("Costo actual: "+str(costo)) 
             else:
                 print("El departamento 2 se encuentra con una temperatura baja")
-                print("No se efectuo ninguna acción. Costo actual" + str(costo))
+                print("No se efectuo ninguna acción. Costo actual: " + str(costo))
 
             if temp_ingreso2 == '1':
                 print("El departamento 3 registra una temperatura alta")
@@ -78,12 +78,44 @@ def cam_termica():
                 print("Costo actual: "+str(costo)) 
             else:
                 print("El departamento 3 se encuentra con una temperatura baja")
-                print("No se efectuo ninguna acción. Costo actual" + str(costo))
+                print("No se efectuo ninguna acción. Costo actual: " + str(costo))
                 
+    if depart_ingreso == 'departamento2':
+        print("La camara se encuentra en el departamento 2" )
 
+        if temp_ingreso == '1':
+            #mensaje de alerta
+            print("Se ha registrado una temperatura alta dentro del departamento 2.")
+            print("Activar el sistema de enfriamiento")
+            #activar el sistema de enfriamiento
+            objetivo['departamento2'] = '0'
+            #incremento del costo por el funcionamiento
+            costo += 1
+            #mensaje de la solución y aumento del costo
+            print("Temperatura del departamento 2 establecida en baja.")
+            print("Costo actual: "+str(costo))
 
-
-
-
+            if temp_ingreso1 == '1':
+                print("El departamento 1 registra una temperatura alta")
+                print("Activar el sistema de enfriamiento")
+                objetivo['departamento1'] = '0'
+                costo +=1 
+                print("Temperatura del departamento 1 establecida en baja.")
+                print("Costo actual: "+str(costo))
+            else:
+                print("El departamento 1 se encuentra con una temperatura baja")
+                print("No se efectuo ninguna acción. Costo actual" + str(costo))
             
+            if temp_ingreso2 == '1':
+                print("El departamento 3 registra una temperatura alta")
+                print("Activar el sistema de enfriamiento")
+                objetivo['departamento3'] = '0'
+                costo +=1 
+                print("Temperatura del departamento 2 establecida en baja.")
+                print("Costo actual: "+str(costo))
+            else:
+                print("El departamento 3 se encuentra con una temperatura baja")
+                print("No se efectuo ninguna acción. Costo actual" + str(costo))
+
+
 
