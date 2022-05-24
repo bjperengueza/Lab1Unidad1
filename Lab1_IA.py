@@ -15,4 +15,22 @@ def cam_termica():
     #objetivo a cumplir
     print("Se busca llegar a la temperatura: "+ str(objetivo))
 
-    
+    #verificar en que habitacion se encuentra la camara
+    if depart_ingreso == 'departamentos1':
+        #mensaje de ubicacion  de la camara
+        print("La camara se encuentra en el departamento 1" )
+        #caso en que el departamento registre una termperatura alta
+        if temp_ingreso == '1':
+            #mensaje de alerta
+            print("Se ha registrado una temperatura alta dentro del departamento 1.")
+            #activar el sistema de enfriamiento
+            objetivo['departamento1'] = '0'
+            #incremento del costo por el funcionamiento
+            costo += 1
+            #mensaje de la solución y aumento del costo
+            print("Temperatura del departamento establecida en baja.")
+            print("Costo actual: "+str(costo))
+
+            
+            
+
