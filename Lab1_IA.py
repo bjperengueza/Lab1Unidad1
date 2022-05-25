@@ -10,9 +10,9 @@ def cam_termica():
     #Ingreso del departamento donde se va a utilizar la camara 
     depart_ingreso = input("Ingrese el departamento que desee utilizar la camara termica: ")
     #ingrese el registro de la temperatura
-    temp_ingreso = input("La temperatura del departamento es: ")
-    temp_ingreso1= input("La temperatura de otro departamentos es:")
-    temp_ingreso2= input("La temperatura del siguiente departamentos es:")
+    temp_ingreso = input("Ingrese la temperatura del departamento: ")
+    temp_ingreso1= input("Ingrese la temperatura de otro departamento: ")
+    temp_ingreso2= input("Ingrese la temperatura del siguiente departamentos: ")
     #objetivo a cumplir
     print("Se busca llegar a la temperatura: "+ str(objetivo))
 
@@ -33,6 +33,7 @@ def cam_termica():
             print("Temperatura del departamento 1 establecida en baja.")
             print("Costo actual: "+str(costo))
 
+            #caso en que la temperatura 
             if temp_ingreso1 == '1':
                 print("El departamento 2 registra una temperatura alta")
                 print("Activar el sistema de enfriamiento")
